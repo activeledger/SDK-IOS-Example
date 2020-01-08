@@ -1,0 +1,9 @@
+[submodule "Alamofire"]
+	path = Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "SwiftyRSA"]
+	path = SwiftyRSA
+	url = https://github.com/TakeScoop/SwiftyRSA
+[submodule "SwiftyJSON"]
+	path = SwiftyJSON
+	url = https://github.com/SwiftyJSON/SwiftyJSON
