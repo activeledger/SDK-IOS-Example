@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F07BF37F23C7FB270083EC1D /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */; };
+		F07BF39523C7FB7B0083EC1D /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF39423C7FB7B0083EC1D /* SHA256.swift */; };
 		F0AB8D6023C138F5002AD0CD /* Activeledger_SDK_IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F0AB8D5E23C138F5002AD0CD /* Activeledger_SDK_IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AB8D6723C13930002AD0CD /* ActiveledgerSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AB8D6623C13930002AD0CD /* ActiveledgerSDK.swift */; };
 		F0AB8D9923C14EA2002AD0CD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AB8D8B23C14E4C002AD0CD /* Alamofire.framework */; };
@@ -170,6 +172,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveKeyPair.swift; sourceTree = "<group>"; };
+		F07BF39423C7FB7B0083EC1D /* SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
 		F0AB8D5B23C138F5002AD0CD /* Activeledger_SDK_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Activeledger_SDK_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AB8D5E23C138F5002AD0CD /* Activeledger_SDK_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Activeledger_SDK_IOS.h; sourceTree = "<group>"; };
 		F0AB8D5F23C138F5002AD0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				F0AB8D5E23C138F5002AD0CD /* Activeledger_SDK_IOS.h */,
 				F0AB8D5F23C138F5002AD0CD /* Info.plist */,
 				F0AB8D6623C13930002AD0CD /* ActiveledgerSDK.swift */,
+				F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */,
+				F07BF39423C7FB7B0083EC1D /* SHA256.swift */,
 			);
 			path = "Activeledger-SDK-IOS";
 			sourceTree = "<group>";
@@ -501,7 +507,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07BF37F23C7FB270083EC1D /* EllipticCurveKeyPair.swift in Sources */,
 				F0AB8D6723C13930002AD0CD /* ActiveledgerSDK.swift in Sources */,
+				F07BF39523C7FB7B0083EC1D /* SHA256.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

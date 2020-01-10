@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         activeledgerSDK.setConnection(prot: "http", baseURL: "testnet-uk.activeledger.io", port: "5260")
 
-        activeledgerSDK.generateKeys(type: "RSA", name: "ASL")
+        activeledgerSDK.generateKeys(type: "ec", name: "ASL")
 
         activeledgerSDK.onBoardKeys()
         
