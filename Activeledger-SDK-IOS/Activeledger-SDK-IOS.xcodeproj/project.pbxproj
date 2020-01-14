@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F07BF37F23C7FB270083EC1D /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */; };
 		F07BF39523C7FB7B0083EC1D /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF39423C7FB7B0083EC1D /* SHA256.swift */; };
+		F07BF3B223C8CAA60083EC1D /* EllipticCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF3B123C8CAA60083EC1D /* EllipticCurve.swift */; };
+		F07BF3B423C8CAD60083EC1D /* RSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF3B323C8CAD60083EC1D /* RSA.swift */; };
+		F07BF3B723C8CB120083EC1D /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF3B623C8CB120083EC1D /* Http.swift */; };
+		F07BF3BA23C8CCB40083EC1D /* OnboardTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF3B923C8CCB40083EC1D /* OnboardTransaction.swift */; };
+		F07BF3BC23C8D0CD0083EC1D /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BF3BB23C8D0CD0083EC1D /* Encryption.swift */; };
 		F0AB8D6023C138F5002AD0CD /* Activeledger_SDK_IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F0AB8D5E23C138F5002AD0CD /* Activeledger_SDK_IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0AB8D6723C13930002AD0CD /* ActiveledgerSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AB8D6623C13930002AD0CD /* ActiveledgerSDK.swift */; };
 		F0AB8D9923C14EA2002AD0CD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AB8D8B23C14E4C002AD0CD /* Alamofire.framework */; };
@@ -174,6 +179,11 @@
 /* Begin PBXFileReference section */
 		F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveKeyPair.swift; sourceTree = "<group>"; };
 		F07BF39423C7FB7B0083EC1D /* SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
+		F07BF3B123C8CAA60083EC1D /* EllipticCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurve.swift; sourceTree = "<group>"; };
+		F07BF3B323C8CAD60083EC1D /* RSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSA.swift; sourceTree = "<group>"; };
+		F07BF3B623C8CB120083EC1D /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		F07BF3B923C8CCB40083EC1D /* OnboardTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardTransaction.swift; sourceTree = "<group>"; };
+		F07BF3BB23C8D0CD0083EC1D /* Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryption.swift; sourceTree = "<group>"; };
 		F0AB8D5B23C138F5002AD0CD /* Activeledger_SDK_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Activeledger_SDK_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AB8D5E23C138F5002AD0CD /* Activeledger_SDK_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Activeledger_SDK_IOS.h; sourceTree = "<group>"; };
 		F0AB8D5F23C138F5002AD0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +207,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F07BF39A23C8CA1A0083EC1D /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				F07BF3B023C8CA630083EC1D /* EllipticCurve */,
+				F07BF3AF23C8CA5B0083EC1D /* RSA */,
+				F07BF3BB23C8D0CD0083EC1D /* Encryption.swift */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		F07BF3AF23C8CA5B0083EC1D /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				F07BF3B323C8CAD60083EC1D /* RSA.swift */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		F07BF3B023C8CA630083EC1D /* EllipticCurve */ = {
+			isa = PBXGroup;
+			children = (
+				F07BF39423C7FB7B0083EC1D /* SHA256.swift */,
+				F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */,
+				F07BF3B123C8CAA60083EC1D /* EllipticCurve.swift */,
+			);
+			path = EllipticCurve;
+			sourceTree = "<group>";
+		};
+		F07BF3B523C8CAF90083EC1D /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				F07BF3B623C8CB120083EC1D /* Http.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		F07BF3B823C8CB340083EC1D /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				F07BF3B923C8CCB40083EC1D /* OnboardTransaction.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
 		F0AB8D5123C138F5002AD0CD = {
 			isa = PBXGroup;
 			children = (
@@ -220,11 +274,12 @@
 		F0AB8D5D23C138F5002AD0CD /* Activeledger-SDK-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				F07BF3B823C8CB340083EC1D /* Transaction */,
+				F07BF3B523C8CAF90083EC1D /* HTTP */,
+				F07BF39A23C8CA1A0083EC1D /* Encryption */,
 				F0AB8D5E23C138F5002AD0CD /* Activeledger_SDK_IOS.h */,
 				F0AB8D5F23C138F5002AD0CD /* Info.plist */,
 				F0AB8D6623C13930002AD0CD /* ActiveledgerSDK.swift */,
-				F07BF37E23C7FB270083EC1D /* EllipticCurveKeyPair.swift */,
-				F07BF39423C7FB7B0083EC1D /* SHA256.swift */,
 			);
 			path = "Activeledger-SDK-IOS";
 			sourceTree = "<group>";
@@ -508,8 +563,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F07BF37F23C7FB270083EC1D /* EllipticCurveKeyPair.swift in Sources */,
+				F07BF3B223C8CAA60083EC1D /* EllipticCurve.swift in Sources */,
 				F0AB8D6723C13930002AD0CD /* ActiveledgerSDK.swift in Sources */,
+				F07BF3BA23C8CCB40083EC1D /* OnboardTransaction.swift in Sources */,
 				F07BF39523C7FB7B0083EC1D /* SHA256.swift in Sources */,
+				F07BF3B423C8CAD60083EC1D /* RSA.swift in Sources */,
+				F07BF3BC23C8D0CD0083EC1D /* Encryption.swift in Sources */,
+				F07BF3B723C8CB120083EC1D /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
