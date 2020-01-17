@@ -1,0 +1,6 @@
+framework module Pods_Activeledger_SDK_IOS {
+  umbrella header "Pods-Activeledger-SDK-IOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

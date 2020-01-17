@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework

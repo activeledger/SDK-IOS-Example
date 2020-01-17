@@ -3,24 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0107E9F23D0DBA800AB26BF /* Activeledger_SDK_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0107E9E23D0DB1000AB26BF /* Activeledger_SDK_IOS.framework */; };
+		F0107EA023D0DBA900AB26BF /* Activeledger_SDK_IOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0107E9E23D0DB1000AB26BF /* Activeledger_SDK_IOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F06FFCE123D0BFE700C32AB8 /* Pods_SDK_IOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469770985E3D47018E7C7EB1 /* Pods_SDK_IOS_Example.framework */; };
+		F06FFCE223D0BFE700C32AB8 /* Pods_SDK_IOS_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 469770985E3D47018E7C7EB1 /* Pods_SDK_IOS_Example.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0AB8D3E23C1382F002AD0CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AB8D3D23C1382F002AD0CD /* AppDelegate.swift */; };
 		F0AB8D4023C1382F002AD0CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AB8D3F23C1382F002AD0CD /* SceneDelegate.swift */; };
 		F0AB8D4223C1382F002AD0CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AB8D4123C1382F002AD0CD /* ViewController.swift */; };
 		F0AB8D4523C1382F002AD0CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AB8D4323C1382F002AD0CD /* Main.storyboard */; };
 		F0AB8D4723C13833002AD0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0AB8D4623C13833002AD0CD /* Assets.xcassets */; };
 		F0AB8D4A23C13833002AD0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AB8D4823C13833002AD0CD /* LaunchScreen.storyboard */; };
-		F0AB8D7C23C14055002AD0CD /* Activeledger_SDK_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AB8D7B23C1404A002AD0CD /* Activeledger_SDK_IOS.framework */; };
-		F0AB8D7D23C14055002AD0CD /* Activeledger_SDK_IOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0AB8D7B23C1404A002AD0CD /* Activeledger_SDK_IOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F0AB8D7A23C1404A002AD0CD /* PBXContainerItemProxy */ = {
+		F0107E9D23D0DB1000AB26BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F0AB8D7623C1404A002AD0CD /* Activeledger-SDK-IOS.xcodeproj */;
+			containerPortal = F0107E9923D0DB1000AB26BF /* Activeledger-SDK-IOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F0AB8D5B23C138F5002AD0CD;
 			remoteInfo = "Activeledger-SDK-IOS";
@@ -34,7 +36,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F0AB8D7D23C14055002AD0CD /* Activeledger_SDK_IOS.framework in Embed Frameworks */,
+				F0107EA023D0DBA900AB26BF /* Activeledger_SDK_IOS.framework in Embed Frameworks */,
+				F06FFCE223D0BFE700C32AB8 /* Pods_SDK_IOS_Example.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		469770985E3D47018E7C7EB1 /* Pods_SDK_IOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDK_IOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F54EAE04090B9024AA28C5 /* Pods-SDK-IOS-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDK-IOS-Example.debug.xcconfig"; path = "Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7F03D7C4B5C2453E5773BE01 /* Pods-SDK-IOS-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDK-IOS-Example.release.xcconfig"; path = "Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example.release.xcconfig"; sourceTree = "<group>"; };
+		F0107E9923D0DB1000AB26BF /* Activeledger-SDK-IOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Activeledger-SDK-IOS.xcodeproj"; path = "../Activeledger-SDK-IOS/Activeledger-SDK-IOS.xcodeproj"; sourceTree = "<group>"; };
 		F0AB8D3A23C1382F002AD0CD /* SDK-IOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDK-IOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AB8D3D23C1382F002AD0CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0AB8D3F23C1382F002AD0CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +57,6 @@
 		F0AB8D4623C13833002AD0CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0AB8D4923C13833002AD0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0AB8D4B23C13833002AD0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0AB8D7623C1404A002AD0CD /* Activeledger-SDK-IOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Activeledger-SDK-IOS.xcodeproj"; path = "../Activeledger-SDK-IOS/Activeledger-SDK-IOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,20 +64,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0AB8D7C23C14055002AD0CD /* Activeledger_SDK_IOS.framework in Frameworks */,
+				F0107E9F23D0DBA800AB26BF /* Activeledger_SDK_IOS.framework in Frameworks */,
+				F06FFCE123D0BFE700C32AB8 /* Pods_SDK_IOS_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B19EA292D4B635E3B59E257 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54F54EAE04090B9024AA28C5 /* Pods-SDK-IOS-Example.debug.xcconfig */,
+				7F03D7C4B5C2453E5773BE01 /* Pods-SDK-IOS-Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0107E9A23D0DB1000AB26BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0107E9E23D0DB1000AB26BF /* Activeledger_SDK_IOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F0AB8D3123C1382F002AD0CD = {
 			isa = PBXGroup;
 			children = (
-				F0AB8D7623C1404A002AD0CD /* Activeledger-SDK-IOS.xcodeproj */,
+				F0107E9923D0DB1000AB26BF /* Activeledger-SDK-IOS.xcodeproj */,
 				F0AB8D3C23C1382F002AD0CD /* SDK-IOS-Example */,
 				F0AB8D3B23C1382F002AD0CD /* Products */,
 				F0AB8D6F23C13BD7002AD0CD /* Frameworks */,
+				0B19EA292D4B635E3B59E257 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,16 +125,9 @@
 		F0AB8D6F23C13BD7002AD0CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				469770985E3D47018E7C7EB1 /* Pods_SDK_IOS_Example.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F0AB8D7723C1404A002AD0CD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F0AB8D7B23C1404A002AD0CD /* Activeledger_SDK_IOS.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,10 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0AB8D4E23C13833002AD0CD /* Build configuration list for PBXNativeTarget "SDK-IOS-Example" */;
 			buildPhases = (
+				719A9D0936D0CBA5D2600546 /* [CP] Check Pods Manifest.lock */,
 				F0AB8D3623C1382F002AD0CD /* Sources */,
 				F0AB8D3723C1382F002AD0CD /* Frameworks */,
 				F0AB8D3823C1382F002AD0CD /* Resources */,
 				F0AB8D7323C13BD7002AD0CD /* Embed Frameworks */,
+				CDBA110D6F36D6A680EACFCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,8 +181,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F0AB8D7723C1404A002AD0CD /* Products */;
-					ProjectRef = F0AB8D7623C1404A002AD0CD /* Activeledger-SDK-IOS.xcodeproj */;
+					ProductGroup = F0107E9A23D0DB1000AB26BF /* Products */;
+					ProjectRef = F0107E9923D0DB1000AB26BF /* Activeledger-SDK-IOS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -173,11 +193,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F0AB8D7B23C1404A002AD0CD /* Activeledger_SDK_IOS.framework */ = {
+		F0107E9E23D0DB1000AB26BF /* Activeledger_SDK_IOS.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Activeledger_SDK_IOS.framework;
-			remoteRef = F0AB8D7A23C1404A002AD0CD /* PBXContainerItemProxy */;
+			remoteRef = F0107E9D23D0DB1000AB26BF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -194,6 +214,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		719A9D0936D0CBA5D2600546 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDK-IOS-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDBA110D6F36D6A680EACFCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0AB8D3623C1382F002AD0CD /* Sources */ = {
@@ -344,6 +406,7 @@
 		};
 		F0AB8D4F23C13833002AD0CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F54EAE04090B9024AA28C5 /* Pods-SDK-IOS-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -362,6 +425,7 @@
 		};
 		F0AB8D5023C13833002AD0CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F03D7C4B5C2453E5773BE01 /* Pods-SDK-IOS-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
