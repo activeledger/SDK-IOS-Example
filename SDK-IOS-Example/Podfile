@@ -7,8 +7,10 @@ target 'SDK-IOS-Example' do
 
   # Pods for SDK-IOS-Example
 
-pod 'Alamofire', '~> 5.0.0-rc.3'
+	pod 'Alamofire', '~> 5.0.0-rc.3'
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'SwiftyRSA'
+	pod 'RxSwift', '~> 5'
+  	pod 'RxCocoa', '~> 5'
 
 end

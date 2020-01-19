@@ -8,6 +8,7 @@
 
 import UIKit
 import Activeledger_SDK_IOS
+import RxSwift
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -18,6 +19,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var lblKeyName: UILabel!
     @IBOutlet weak var lblOnboardID: UILabel!
+    
+    private let bag = DisposeBag()
         
     let encryptionList = ["RSA", "EllipticCurve"]
     
@@ -59,8 +62,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func onboardKeys(_ sender: Any) {
         activeledgerSDK?.onBoardKeys()
-        lblKeyName.text = "This is a key name"
-        lblOnboardID.text = "12345"
+            .subscribe(onSuccess: { response in
+            
+                print("-----result---")
+                print(response)
+                
+                self.lblKeyName.text = self.activeledgerSDK?.onboardName
+                self.lblOnboardID.text = self.activeledgerSDK?.onboardID
+                
+            }, onError: { error in
+                print(error)
+            }).disposed(by: bag)
+        
+    
     }
     
 }

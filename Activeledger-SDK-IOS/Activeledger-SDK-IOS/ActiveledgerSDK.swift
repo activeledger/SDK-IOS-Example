@@ -9,6 +9,7 @@
 import Foundation
 import LocalAuthentication
 import SwiftyJSON
+import RxSwift
 
 public class ActiveledgerSDK {
     
@@ -19,7 +20,10 @@ public class ActiveledgerSDK {
     private var httpInstance: Http
     private var onboardTransactionInstance: OnboardTransaction
     private var encryptionInstance: Encryption
-    
+        
+    public var onboardID = ""
+    public var onboardName = ""
+
     public init(http: String, baseURL: String, port: String) {
         encryptionInstance = Encryption()
         onboardTransactionInstance = OnboardTransaction(instance: encryptionInstance)
@@ -43,14 +47,24 @@ public class ActiveledgerSDK {
         encryptionInstance.generateKeys(type: type, name: name)
     }
     
-    public func onBoardKeys(){
+    public func onBoardKeys() -> Single<JSON> {
                     
         let transaction  = generateOnboardTransaction()
-        let result = executeTransaction(transaction: transaction)
         
-        print("-----result---")
-        print(result ?? "No result")
+        return executeTransaction(transaction: transaction)
+            .map{ self.extractOnboardID(onboardResponse: $0) }
+        
+    }
     
+    private func extractOnboardID(onboardResponse: JSON) -> JSON {
+        
+        onboardID = onboardResponse["$streams"]["new"][0]["id"].rawString() ?? ""
+        onboardName = onboardResponse["$streams"]["new"][0]["name"].rawString() ?? ""
+        
+        print(onboardID)
+        print(onboardName)
+        
+        return onboardResponse
     }
     
     public func generateOnboardTransaction() -> String{
@@ -67,7 +81,7 @@ public class ActiveledgerSDK {
     }
     
     
-    public func executeTransaction(transaction: String) -> JSON? {
+    public func executeTransaction(transaction: String) -> Single<JSON> {
         return httpInstance.executeTransaction(url: url, transaction: transaction)
     }
     

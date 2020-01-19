@@ -9,43 +9,52 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RxSwift
 
 public class Http {
     
-    public func executeTransaction(url: String, transaction: String) -> JSON? {
+    public func executeTransaction(url: String, transaction: String) -> Single<JSON> {
+                
+        return Single<JSON>.create{ (observer) -> Disposable in
                      
            
-        var request = URLRequest(url: URL(string: url)!)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            var request = URLRequest(url: URL(string: url)!)
+            request.httpMethod = HTTPMethod.post.rawValue
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let data = (transaction.data(using: .utf8))! as Data
-        
-        var resp: JSON? = nil
+            let data = (transaction.data(using: .utf8))! as Data
+            
+            request.httpBody = data
 
-        request.httpBody = data
-
-        AF.request(request)
-            .responseJSON {
-                response in
-                
-                switch response.result {
-    
-                case .success:
-                
-                    print(response)
-                    resp = JSON(response)
-
-                    break
+            AF.request(request)
+                .responseJSON {
+                    response in
                     
-                case .failure(let error):
-                    print(error)
-                
-               }
-                
-        }
+                    switch response.result {
         
-        return resp
+                    case .success:
+                    
+                        do{
+                            let json = try JSON(data: response.data!)
+        
+                            observer(.success(json))
+
+                        } catch (let error) {
+                            observer(.error(error))
+                        }
+                       
+                        break
+                        
+                    case .failure(let error):
+                        observer(.error(error))
+                        
+                   }
+                    
+            }
+                        
+            return Disposables.create()
+            
+        }
            
     }
     
