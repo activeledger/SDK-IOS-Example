@@ -3,6 +3,8 @@
 
 # Activeledger SDK-IOS
 
+![](https://github.com/activeledger/SDK-IOS/tree/master/assets/appVideo.gif)
+
 
 ## SDK Dev Instruction
 
