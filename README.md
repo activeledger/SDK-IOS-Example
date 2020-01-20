@@ -11,7 +11,7 @@ Use the ActiveLedger SDK interface to Use the SDK.
 ## Initialise the SDK
 
 ```Swift
-val activeledgerSDK = ActiveledgerSDK(http: "http", baseURL: "testnet-uk.activeledger.io", port: "5260")
+let activeledgerSDK = ActiveledgerSDK(http: "http", baseURL: "testnet-uk.activeledger.io", port: "5260")
 ```
 
 ## Generate KeyPair
@@ -23,13 +23,13 @@ activeledgerSDK?.generateKeys(type: encryptionSelected, name: "ASL")
 ## Fetching Public Key in PEM
 
 ```Swift
-val publicKey = activeledgerSDK?.getPublicKeyPEM()
+let publicKey = activeledgerSDK?.getPublicKeyPEM()
 ```
 
 ## Fetching Private Key in PEM
 
 ```Swift
-val privateKey = activeledgerSDK?.getPrivateKeyPEM()
+let privateKey = activeledgerSDK?.getPrivateKeyPEM()
 ```
 
 ## Oboard KeyPair
@@ -37,7 +37,7 @@ val privateKey = activeledgerSDK?.getPrivateKeyPEM()
 Onboarding a KeyPair will give an Single Observable in return. Use RxSwift to subscribe to it.
 
 ```Swift
-val response: Single<JSON> = activeledgerSDK?.onBoardKeys()
+let response: Single<JSON> = activeledgerSDK?.onBoardKeys()
 ```
 
 ## Server Sent Event
@@ -54,7 +54,7 @@ ActiveLedgerSDK.getInstance().subscribeToEvent(protocol, ip, port, url, null/Ser
 Execute method takes a transaction and will give an Single Observable in return with response in JSON format. Use RxSwiftto subscribe to it.
 
 ```Swift
-val request: Single<JSON> = executeTransaction(transaction: transaction)
+let request: Single<JSON> = executeTransaction(transaction: transaction)
 
 request
 .subscribe(onSuccess: { response in
