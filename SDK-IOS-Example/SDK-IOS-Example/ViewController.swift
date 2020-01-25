@@ -30,7 +30,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         activeledgerSDK = ActiveledgerSDK(http: "http", baseURL: "testnet-uk.activeledger.io", port: "5260")
     }
     
@@ -58,6 +57,29 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         activeledgerSDK?.generateKeys(type: encryptionSelected, name: "ASL")
         lblPublicKey.text = activeledgerSDK?.getPublicKeyPEM()
         lblPrivateKey.text = activeledgerSDK?.getPrivateKeyPEM()
+        
+        
+        activeledgerSDK?.subscribeToEvent(url: URL(string: "http://testnet-uk.activeledger.io:5261/api/activity/subscribe")!)
+            .subscribe(
+                          onNext: { data in
+                            print("---event---")
+                            print(data.type)
+
+                          },
+                          onError: { error in
+                            print(error)
+                          },
+                          onCompleted: {
+                            print("Completed")
+                          },
+                          onDisposed: {
+                            print("Disposed")
+                            self.activeledgerSDK?.disconnectEvent()
+                          }
+                      ).disposed(by: bag)
+        
+       
+        
     }
     
     @IBAction func onboardKeys(_ sender: Any) {

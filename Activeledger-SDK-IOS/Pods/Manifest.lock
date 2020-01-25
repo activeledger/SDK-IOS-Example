@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - IKEventSource (3.0.1)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - IKEventSource
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SwiftyJSON (~> 4.0)
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IKEventSource
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -29,12 +32,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  IKEventSource: ababa323587c6b0c250dd54d4a48ab68fd845e8e
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
 
-PODFILE CHECKSUM: 2181d8ea9032380699e3ef212aa75f4c28fa4336
+PODFILE CHECKSUM: 46e7d643fd602acccaf0406a11aa8b746c27cb5d
 
 COCOAPODS: 1.8.4

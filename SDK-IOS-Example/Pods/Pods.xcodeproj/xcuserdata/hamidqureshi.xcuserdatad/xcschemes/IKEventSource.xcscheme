@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "55FCEEF946276F46FF961130A06D4890"
-               BuildableName = "Pods-Activeledger-SDK-IOS.framework"
-               BlueprintName = "Pods-Activeledger-SDK-IOS"
+               BlueprintIdentifier = "1BAA83C98D96738313EA8114E14227E5"
+               BuildableName = "IKEventSource.framework"
+               BlueprintName = "IKEventSource"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

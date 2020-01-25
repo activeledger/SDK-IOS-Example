@@ -11,5 +11,6 @@ target 'Activeledger-SDK-IOS' do
 	pod 'SwiftyRSA'
 	pod 'RxSwift', '~> 5'
   	pod 'RxCocoa', '~> 5'
+	pod 'IKEventSource'
 
 end

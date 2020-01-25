@@ -20,6 +20,7 @@ public class ActiveledgerSDK {
     private var httpInstance: Http
     private var onboardTransactionInstance: OnboardTransaction
     private var encryptionInstance: Encryption
+    private var eventInstance: SSEUtil
         
     public var onboardID = ""
     public var onboardName = ""
@@ -28,6 +29,7 @@ public class ActiveledgerSDK {
         encryptionInstance = Encryption()
         onboardTransactionInstance = OnboardTransaction(instance: encryptionInstance)
         httpInstance = Http()
+        eventInstance = SSEUtil()
         
         setConnection(http: http, baseURL: baseURL, port: port)
     }
@@ -91,6 +93,18 @@ public class ActiveledgerSDK {
     
     public func getPrivateKeyPEM() -> String {
         return encryptionInstance.getPrivateKeyPEM()
+    }
+    
+    public func subscribeToEvent(url: URL) -> Observable<Event> {
+        return eventInstance.subscribeToEvent(url: url)
+    }
+    
+    public func reConnectEvent(){
+        eventInstance.connect()
+    }
+    
+    public func disconnectEvent(){
+        eventInstance.disconnect()
     }
     
 }
