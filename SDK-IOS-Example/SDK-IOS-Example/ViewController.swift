@@ -58,7 +58,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         lblPublicKey.text = activeledgerSDK?.getPublicKeyPEM()
         lblPrivateKey.text = activeledgerSDK?.getPrivateKeyPEM()
         
-        
         activeledgerSDK?.subscribeToEvent(url: URL(string: "http://testnet-uk.activeledger.io:5261/api/activity/subscribe")!)
             .subscribe(
                           onNext: { data in

@@ -44,11 +44,39 @@ let response: Single<JSON> = activeledgerSDK?.onBoardKeys()
 
 ## Server Sent Event
 
-Server Sent Events can be subscribed by giving the protocol, ip and port. All the functional URLs can be found in Utility/ApiURL.
-User can create  their own ServerEventListener and observe the events or can pass null and Observe the LiveData variable "SSEUtil.getInstance().eventLiveData".
+Server Sent Events can be subscribed by giving the URL. Function return RxSwift Observable that can be subscribed (Example given below). Events are connected automatically and is disconnected when disposing Observable. Dont forget to dispose Observable to avoid memory leaks. 
+There are Three events :
+1- Open
+2- Message
+3- Complete
+
+Properties of event object might change with respect to differnt types which can be accessed by "type" property of the event.
+In case in which event is disconnect unexpecteldly, User can reconnect using 
 
 ```Swift
-ActiveLedgerSDK.getInstance().subscribeToEvent(protocol, ip, port, url, null/ServerEventListener);
+activeledgerSDK?.reConnectEvent()
+```
+Example: 
+
+```Swift
+activeledgerSDK?.subscribeToEvent(url: URL(string: "http://testnet-uk.activeledger.io:5261/api/activity/subscribe")!)
+.subscribe(
+                         onNext: { data in
+                           print("---event---")
+                           print(data.type)
+
+                         },
+                         onError: { error in
+                           print(error)
+                         },
+                         onCompleted: {
+                           print("Completed")
+                         },
+                         onDisposed: {
+                           print("Disposed")
+                           self.activeledgerSDK?.disconnectEvent()
+                         }
+                     ).disposed(by: bag)
 ```
 
 ## Executing a Transaction
