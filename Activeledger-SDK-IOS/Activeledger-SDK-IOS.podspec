@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source       = { :git => "https://github.com/activeledger/SDK-IOS.git", :tag => 0.1.0 }
+  spec.source       = { :git => "https://github.com/activeledger/SDK-IOS.git", :tag => 0.1.1 }
   spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
 
