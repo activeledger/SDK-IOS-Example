@@ -1,0 +1,6 @@
+framework module Activeledger_SDK_IOS {
+  umbrella header "Activeledger-SDK-IOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

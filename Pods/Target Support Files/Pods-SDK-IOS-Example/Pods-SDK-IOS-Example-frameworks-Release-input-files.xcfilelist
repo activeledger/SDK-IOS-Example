@@ -1,0 +1,9 @@
+${PODS_ROOT}/Target Support Files/Pods-SDK-IOS-Example/Pods-SDK-IOS-Example-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Activeledger-SDK-IOS/Activeledger_SDK_IOS.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/IKEventSource/IKEventSource.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework
